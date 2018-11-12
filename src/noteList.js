@@ -1,5 +1,13 @@
 function NoteList() {
-
+  this.notes = []
 }
+
+NoteList.prototype.add = function (note) {
+  this.notes.push(note)
+};
+
+NoteList.prototype.getNotes = function () {
+  return this.notes
+};
 
 module.exports = NoteList
