@@ -1,3 +1,6 @@
+var Note = require("../src/noteModel.js")
+var assert = require("./assert.js")
+
 function newNoteIsAnInstanceOfNote() {
   var newNote = new Note()
   assert.isTrue("Creating a new note", newNote instanceof Note)
