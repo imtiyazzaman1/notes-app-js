@@ -1,13 +1,21 @@
-var Expect = require("./assert.js")
-var describe = require("./assert.js")
+var {
+  Expect,
+  it
+} = require("./assert.js")
+
 var NoteList = require("../src/noteList.js")
 
 function newNoteListIsAnInstanceOfNoteList(){
-  var noteList = new NoteList()
-  expect.isTrue("new note list is an instance of note list", noteList instanceof NoteList)
 }
 
-describe("NoteList can add notes", function(){
+it('new note list is an instance of note list', function() {
+  var noteList = new NoteList()
+  new Expect(noteList).toBeAnInstanceOf(NoteList)
+
+});
+
+
+it("NoteList can add notes", function(){
     var noteList = new NoteList()
     var double = "A note"
     noteList.add(double)
@@ -17,4 +25,4 @@ describe("NoteList can add notes", function(){
 
 
 // newNoteListIsAnInstanceOfNoteList()
-noteListCanAddNotes()
+// noteListCanAddNotes()

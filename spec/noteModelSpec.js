@@ -1,15 +1,19 @@
 var Note = require("../src/noteModel.js")
-var Expect = require("./assert.js")
+var {
+  Expect,
+  it
+} = require("./assert.js")
 
-function newNoteIsAnInstanceOfNote() {
+it('create a new note', function() {
   var newNote = new Note()
-  expect.isTrue("Creating a new note", newNote instanceof Note)
-}
+  new Expect(newNote).toBeAnInstanceOf(Note);
+});
 
-function newNoteTakeTextWhenIntialized() {
+
+it('sets the text of a note', function() {
   var newNote = new Note("This is a note")
-  new Expect(newNote.getText()).toEqual("Setting the text of a new note", "This is a note")
-}
+  new Expect(newNote.getText()).toEqual("This is a note")
+});
 
 // newNoteIsAnInstanceOfNote()
-newNoteTakeTextWhenIntialized()
+// newNoteTakeTextWhenIntialized()
