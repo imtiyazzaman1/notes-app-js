@@ -12,7 +12,7 @@ function noteListCanAddNotes() {
 
   noteList.add(double)
 
-  assert.isTrue("NoteList can add notes", noteList.getNotes()[0] === double)
+  assert.equals("NoteList can add notes", noteList.getNotes()[0], double)
 }
 
 newNoteListIsAnInstanceOfNoteList()

@@ -1,9 +1,16 @@
 var assert = {
-  isTrue: function (testName, assertToCheck) {
-    if (!assertToCheck) {
-      throw new Error("Assertion Failed: " + testName + " is not truthy")
+  isTrue: function (testName, testValue) {
+    if (testValue !== true) {
+      throw new Error(testName + " Failed: " + testValue + " is not truthy")
     } else {
-      console.log("Assertion Passes: " + testName + "!");
+      console.log(testName + " Passes!");
+    }
+  },
+  equals: function (testName, testValue, trueValue) {
+    if (testValue !== trueValue) {
+      throw new Error(testName + " Failed: " + testValue + " does not equal " + trueValue)
+    } else {
+      console.log(testName + " Passes!");
     }
   }
 }
