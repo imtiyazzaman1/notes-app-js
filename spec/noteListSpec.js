@@ -1,19 +1,20 @@
-var assert = require("./assert.js")
+var Expect = require("./assert.js")
+var describe = require("./assert.js")
 var NoteList = require("../src/noteList.js")
 
 function newNoteListIsAnInstanceOfNoteList(){
   var noteList = new NoteList()
-  assert.isTrue("new note list is an instance of note list", noteList instanceof NoteList)
+  expect.isTrue("new note list is an instance of note list", noteList instanceof NoteList)
 }
 
-function noteListCanAddNotes() {
-  var noteList = new NoteList()
-  var double = "A note"
+describe("NoteList can add notes", function(){
+    var noteList = new NoteList()
+    var double = "A note"
+    noteList.add(double)
 
-  noteList.add(double)
+    new Expect(noteList.getNotes()[0]).toEqual(double)
+})
 
-  assert.equals("NoteList can add notes", noteList.getNotes()[0], double)
-}
 
-newNoteListIsAnInstanceOfNoteList()
+// newNoteListIsAnInstanceOfNoteList()
 noteListCanAddNotes()
