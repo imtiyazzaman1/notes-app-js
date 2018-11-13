@@ -9,5 +9,3 @@ NoteList.prototype.add = function (note) {
 NoteList.prototype.getNotes = function () {
   return this.notes
 };
-
-module.exports = NoteList

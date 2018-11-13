@@ -1,13 +1,4 @@
-var {
-  expect,
-  describe,
-  it,
-  Matchers
-} = require("./assert.js")
-
-var NoteList = require("../src/noteList.js")
-
-describe("noteList", function () {
+describe("NoteList", function () {
   it('new note list is an instance of note list', function() {
     var noteList = new NoteList()
     expect(noteList).toBeAnInstanceOf(NoteList)
