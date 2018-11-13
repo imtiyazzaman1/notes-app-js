@@ -8,10 +8,9 @@ describe("NoteList", function () {
     it("adds notes to notelist", function(){
       var noteList = new NoteList()
       var double = "A note"
-      var duble = "Anote"
       noteList.add(double)
 
-      expect(noteList.getNotes()[0]).toEqual(duble)
+      expect(noteList.getNotes()[0]).toEqual(double)
     })
   })
 })
