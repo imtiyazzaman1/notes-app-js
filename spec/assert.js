@@ -21,6 +21,15 @@ function Matchers(exp) {
         console.log('fail');
         return false
       }
+    },
+    toBeAnInstanceOf: function (instance) {
+      if (exp instanceof instance) {
+        console.log('pass');
+        return true
+      } else {
+        console.log('fail');
+        return false
+      }
     }
   }
 }
