@@ -7,10 +7,10 @@ var {
 } = require("./assert.js")
 
 describe("NoteModel", function(){
-  // it('create a new note', function() {
-  //   var newNote = new Note()
-  //   new Expect(newNote).toBeAnInstanceOf(Note);
-  // });
+  it('create a new note', function() {
+    var newNote = new Note()
+    expect(newNote).toBeAnInstanceOf(Note);
+  });
 
   describe("#getText", function(){
     it('gets the text of a note', function() {
