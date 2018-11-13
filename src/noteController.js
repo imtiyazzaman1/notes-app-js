@@ -6,12 +6,14 @@
     this.noteListView = new NoteListView(this.noteList);
   }
 
-  (function () {
-    var noteController = new NoteController(new NoteList());
-    document.getElementById('app').innerHTML =
-      noteController.noteListView.renderView();
-  })();
+  NoteController.prototype.render = function() {
+    document.getElementById('app').innerHTML = this.noteListView.renderView();
+  };
 
   exports.NoteController = NoteController;
-
 })(this);
+
+(function () {
+  var noteController = new NoteController(new NoteList());
+  noteController.render();
+})();

@@ -4,4 +4,16 @@ describe('NoteController', function() {
     expect(noteController).toBeAnInstanceOf(NoteController);
   });
 
+  it('renders a view', function() {
+    var node = document.createElement('div');
+    node.setAttribute('id', 'app');
+    document.body.appendChild(node);
+
+    var noteController = new NoteController(new NoteList());
+
+    noteController.render();
+
+    expect(document.getElementById('app').innerHTML).toEqual('<ul><li><div>Favourite drink: seltzer</div></li></ul>');
+  });
+
 });
