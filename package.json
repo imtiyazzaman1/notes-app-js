@@ -1,0 +1,24 @@
+{
+  "name": "notes-app-js",
+  "version": "1.0.0",
+  "description": "",
+  "main": "index.js",
+  "scripts": {
+    "test": "echo \"Error: no test specified\" && exit 1",
+    "start": "node_modules/http-server/bin/http-server"
+  },
+  "repository": {
+    "type": "git",
+    "url": "git+https://github.com/imtiyazzaman1/notes-app-js.git"
+  },
+  "keywords": [],
+  "author": "",
+  "license": "ISC",
+  "bugs": {
+    "url": "https://github.com/imtiyazzaman1/notes-app-js/issues"
+  },
+  "homepage": "https://github.com/imtiyazzaman1/notes-app-js#readme",
+  "dependencies": {
+    "http-server": "^0.11.1"
+  }
+}
