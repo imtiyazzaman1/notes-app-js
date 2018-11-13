@@ -4,13 +4,22 @@ describe("NoteList", function () {
     expect(noteList).toBeAnInstanceOf(NoteList)
   });
 
-  describe("#add", function () {
+  describe("#getNotes", function () {
     it("adds notes to notelist", function(){
       var noteList = new NoteList()
       var double = "A note"
-      noteList.add(double)
+      noteList.notes = [double]
 
       expect(noteList.getNotes()[0]).toEqual(double)
     })
+
+    describe('#add', function() {
+      it('creates and stores a note object with the given text', function() {
+        var noteList = new NoteList()
+        noteList.add("Add a note")
+
+        expect(noteList.getNotes()[0].getText()).toEqual("Add a note");
+      });
+    });
   })
 })
