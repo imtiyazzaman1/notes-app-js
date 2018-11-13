@@ -1,7 +1,8 @@
 var {
-  Expect,
+  expect,
   describe,
-  it
+  it,
+  Matchers
 } = require("./assert.js")
 
 var NoteList = require("../src/noteList.js")
@@ -9,16 +10,17 @@ var NoteList = require("../src/noteList.js")
 describe("noteList", function () {
   it('new note list is an instance of note list', function() {
     var noteList = new NoteList()
-    new Expect(noteList).toBeAnInstanceOf(NoteList)
+    expect(noteList).toBeAnInstanceOf(NoteList)
   });
 
-  describe("add", function () {
+  describe("#add", function () {
     it("adds notes to notelist", function(){
       var noteList = new NoteList()
       var double = "A note"
+      var duble = "Anote"
       noteList.add(double)
 
-      new Expect(noteList.getNotes()[0]).toEqual(double)
+      expect(noteList.getNotes()[0]).toEqual(duble)
     })
   })
 })
