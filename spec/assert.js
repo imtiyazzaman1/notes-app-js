@@ -7,24 +7,28 @@ function it(message, func) {
   describe(" " + message, func)
 }
 
-function Expect(testValue) {
-  this.testValue = testValue
+function expect(exp, matcher) {
+  return Matchers(exp)
 }
 
-Expect.prototype.toBeAnInstanceOf = function (testClass) {
-  if (!(this.testValue instanceof testClass)) {
-    throw new Error(" Failed: " + this.testValue + " is not a " + testClass )
-  }
-};
-
-Expect.prototype.toEqual = function (trueValue) {
-  if (this.testValue !== trueValue) {
-    throw new Error(" Failed: " + this.testValue + " does not equal " + trueValue)
+function Matchers(exp) {
+  return matchers = {
+    toEqual: function (assertion) {
+      if (exp === assertion) {
+        console.log('pass');
+        return true
+      } else {
+        console.log('fail');
+        return false
+      }
+    }
   }
 }
+
 
 module.exports = {
-  Expect,
+  expect,
   describe,
-  it
+  it,
+  Matchers
 }
