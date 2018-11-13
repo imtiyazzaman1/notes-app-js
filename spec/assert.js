@@ -15,19 +15,17 @@ function Matchers(exp) {
   return matchers = {
     toEqual: function (assertion) {
       if (exp === assertion) {
-        console.log('pass');
         return true
       } else {
-        console.log('fail');
+        console.log('FAIL ^');
         return false
       }
     },
     toBeAnInstanceOf: function (instance) {
       if (exp instanceof instance) {
-        console.log('pass');
         return true
       } else {
-        console.log('fail');
+        console.log('FAIL ^');
         return false
       }
     }
