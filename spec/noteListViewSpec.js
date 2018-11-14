@@ -31,9 +31,17 @@ describe("NoteListView", function() {
       noteList.add("Pair 2: Imtiyaz");
 
       var noteListView = new NoteListView(noteList);
-
       expect(noteListView.renderView()).toEqual(
         '<ul><li><div>Pair 1: Henry</div></li><li><div>Pair 2: Imtiyaz</div></li></ul>'
+      );
+    });
+    it('renders a html with only the first 20 chars of note', function() {
+      var noteList = new NoteList();
+      noteList.add("Favourite drink: seltzer");
+
+      var noteListView = new NoteListView(noteList);
+      expect(noteListView.renderView()).toEqual(
+        '<ul><li><div>Favourite drink: sel...</div></li></ul>'
       );
     });
   });

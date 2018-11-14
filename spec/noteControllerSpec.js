@@ -13,7 +13,7 @@ describe('NoteController', function() {
 
     noteController.render();
 
-    expect(document.getElementById('app').innerHTML).toEqual('<ul><li><div>Favourite drink: seltzer</div></li></ul>');
+    expect(document.getElementById('app').innerHTML).toEqual('<ul><li><div>Favourite drink: sel...</div></li></ul>');
   });
 
 });
