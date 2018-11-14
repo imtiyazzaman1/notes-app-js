@@ -7,5 +7,5 @@
     return this.note
   }
 
-  exports.SingNoteView = SingleNoteView;
+  exports.SingleNoteView = SingleNoteView;
 })(this);
