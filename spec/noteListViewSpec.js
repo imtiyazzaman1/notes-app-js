@@ -32,7 +32,7 @@ describe("NoteListView", function() {
 
       var noteListView = new NoteListView(noteList);
       expect(noteListView.renderView()).toEqual(
-        '<ul><li><div>Pair 1: Henry</div></li><li><div>Pair 2: Imtiyaz</div></li></ul>'
+        '<ul><li><div><a href="#notes/1">Pair 1: Henry</a></div></li><li><div><a href="#notes/2">Pair 2: Imtiyaz</a></div></li></ul>'
       );
     });
     it('renders a html with only the first 20 chars of note', function() {
@@ -41,7 +41,7 @@ describe("NoteListView", function() {
 
       var noteListView = new NoteListView(noteList);
       expect(noteListView.renderView()).toEqual(
-        '<ul><li><div>Favourite drink: sel...</div></li></ul>'
+        '<ul><li><div><a href="#notes/1">Favourite drink: sel...</a></div></li></ul>'
       );
     });
   });
