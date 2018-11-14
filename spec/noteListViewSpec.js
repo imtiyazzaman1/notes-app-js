@@ -22,7 +22,7 @@ describe("NoteListView", function() {
       var noteListView = new NoteListView(noteList);
 
       expect(noteListView.renderView()).toEqual(
-        '<ul><li><div>Pair 1: Henry</div></li></ul>'
+        '<ul><li><div><a href="#notes/1">Pair 1: Henry</a></div></li></ul>'
       );
     });
     it('renders a html of the notes for two notes', function() {
