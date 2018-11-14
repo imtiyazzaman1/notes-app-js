@@ -20,6 +20,14 @@ describe("NoteList", function () {
 
         expect(noteList.getNotes()[0].getText()).toEqual("Add a note");
       });
+      it('creates notes with a unique ID', function() {
+        var noteList = new NoteList()
+        noteList.add("This is note1")
+        noteList.add("This is note2")
+        console.log(noteList.getNotes())
+        expect(noteList.getNotes[0].getId()).toEqual(1)
+        // expect(noteList.getNotes[1].getId()).toEqual(2)
+      })
     });
   })
 })
