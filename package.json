@@ -19,6 +19,7 @@
   },
   "homepage": "https://github.com/imtiyazzaman1/notes-app-js#readme",
   "dependencies": {
-    "http-server": "^0.11.1"
+    "http-server": "^0.11.1",
+    "test-sweet": "^3.0.1"
   }
 }

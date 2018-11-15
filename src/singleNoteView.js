@@ -8,7 +8,10 @@
   };
 
   SingleNoteView.prototype.renderNote = function () {
-    return '<div>' + this.note.getText() + '</div>';
+    return document
+      .getElementById("note")
+      .innerHTML = '<div>' + this.note.getText() + '</div>';
+    // return ;
   };
 
   exports.SingleNoteView = SingleNoteView;

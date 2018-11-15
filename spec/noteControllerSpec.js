@@ -12,8 +12,8 @@ describe('NoteController', function() {
     var noteController = new NoteController(new NoteList());
 
     noteController.render();
-
-    expect(document.getElementById('app').innerHTML).toEqual('<ul><li><div><a href="#notes/1">Favourite drink: sel...</a></div></li></ul>');
+    expect(document.getElementById('app').innerHTML)
+      .toEqual('<ul><li><div><a href="#notes/1">Favourite drink: sel...</a></div></li><li><div><a href="#notes/2">Fa: seltzer</a></div></li></ul>');
   });
 
   describe('#getNotefromUrl', function() {
@@ -27,7 +27,6 @@ describe('NoteController', function() {
   describe('#showNote', function() {
     it('displays note from an id', function() {
       var noteController = new NoteController(new NoteList());
-
       expect(noteController.showNote('1')).toEqual('<div>Favourite drink: seltzer</div>')
     });
   });
