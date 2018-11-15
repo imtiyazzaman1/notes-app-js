@@ -10,6 +10,10 @@
     document.getElementById('app').innerHTML = this.noteListView.renderView();
   };
 
+  NoteController.prototype.getNotefromUrl = function(hash) {
+    return hash.split('/')[1];
+  };
+
   exports.NoteController = NoteController;
 })(this);
 
