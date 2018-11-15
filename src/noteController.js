@@ -14,6 +14,14 @@
     return hash.split('/')[1];
   };
 
+  NoteController.prototype.showNote = function (id) {
+    var note = this.noteList.notes.find(function (note) {
+      return note.getId() == id;
+    });
+    var view = new SingleNoteView(note);
+    return view.renderNote();
+  };
+
   exports.NoteController = NoteController;
 })(this);
 
